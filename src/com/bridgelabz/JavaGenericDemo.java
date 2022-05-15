@@ -35,11 +35,28 @@ public class JavaGenericDemo {
         }
     }
 
+    //Method to compare String
+    public static String compareTo(String str1,String str2,String str3) {
+        if(str1.compareTo(str2) > 0) {
+            if(str1.compareTo(str3) > 0) {
+                return str1;
+            } else {
+                return str3;
+            }
+        } else {
+            if(str2.compareTo(str3) > 0) {
+                return str2;
+            } else {
+                return str3;
+            }
+        }
+    }
     public static void main(String[] args) {
         //Welcome message for User
         System.out.println("Welcome to Java Core - Generics Test Maximum .");
 
         System.out.println("Maximum from 3 Integer Object : "+compareTo(90,120,190));
         System.out.println("Maximum from 3 Float Object : "+compareTo(90.0F,120.0F,190.0F));
+        System.out.println("Maximum from 3 String Object : "+compareTo("Apple","Peach","Banana"));
     }
 }
